@@ -128,7 +128,7 @@ def action(my_head: str = Form(default='')):
         
     return results
     
-
+# 退選條件檢查
 @app.post('/quit', response_class=HTMLResponse)
 def action(secid : str = Form(default ='') ,stuid : str = Form(default = '') ):
     conn = MySQLdb.connect(host="127.0.0.1",
@@ -244,7 +244,7 @@ def action(secid : str = Form(default ='') ,stuid : str = Form(default = '') ):
         if selecttype==type:
             typecheck = 1
 
-
+# 加選條件檢查
 # select Time_type from time where Section_id = "1260";
     results = """
     <p><a href="/">Back to Query Interface</a></p>
